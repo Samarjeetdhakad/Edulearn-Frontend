@@ -1,0 +1,19 @@
+/* src/components/layout/DashboardLayout.css */
+.dashboard-wrapper { display: flex; min-height: 100vh; }
+
+.dashboard-main {
+  flex: 1; margin-left: var(--sidebar-w);
+  transition: margin-left 0.25s ease;
+  display: flex; flex-direction: column; min-height: 100vh;
+}
+.dashboard-main.collapsed { margin-left: 70px; }
+
+.dashboard-content {
+  flex: 1; padding: 28px;
+  max-width: 100%; overflow-x: hidden;
+}
+
+@media (max-width: 768px) {
+  .dashboard-main { margin-left: 0; }
+  .dashboard-content { padding: 16px; }
+}

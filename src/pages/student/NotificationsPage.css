@@ -1,0 +1,51 @@
+/* src/pages/student/NotificationsPage.css */
+.notif-row {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 16px 20px;
+  transition: var(--transition);
+  position: relative;
+}
+
+.notif-row:hover {
+  background: var(--bg);
+}
+
+.notif-row.unread {
+  background: #f8faff;
+}
+
+.unread-bar {
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 4px;
+  background: var(--primary);
+  border-radius: 0 4px 4px 0;
+}
+
+.notif-actions {
+  display: flex;
+  gap: 4px;
+  flex-shrink: 0;
+  opacity: 0;
+  transition: opacity 0.2s;
+}
+
+.notif-row:hover .notif-actions {
+  opacity: 1;
+}
+
+@media (max-width: 640px) {
+  .notif-row {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .notif-actions {
+    opacity: 1;
+    align-self: flex-end;
+    margin-top: 10px;
+  }
+}

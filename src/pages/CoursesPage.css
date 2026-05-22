@@ -1,0 +1,28 @@
+/* src/pages/CoursesPage.css */
+.courses-page {
+  display: grid; grid-template-columns: 260px 1fr;
+  gap: 28px; max-width: 1200px; margin: 0 auto;
+  padding: 32px 20px; min-height: 80vh;
+}
+.filters-panel {
+  position: sticky; top: calc(var(--navbar-h) + 16px);
+  height: fit-content; background: #fff; border: 1px solid var(--border);
+  border-radius: var(--radius); padding: 20px;
+}
+.filter-group { margin-bottom: 24px; }
+.filter-label { display: block; font-size: 13px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; color: var(--text-muted); margin-bottom: 10px; }
+.filter-option { display: flex; align-items: center; gap: 8px; padding: 6px 0; cursor: pointer; font-size: 14px; color: var(--text); }
+.filter-option input { accent-color: var(--primary); }
+.filter-option:hover { color: var(--primary); }
+
+.courses-main { min-width: 0; }
+.courses-topbar { display: flex; gap: 12px; margin-bottom: 20px; }
+.search-wrap { flex: 1; position: relative; }
+.search-ico { position: absolute; left: 12px; top: 50%; transform: translateY(-50%); font-size: 16px; }
+.courses-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 20px; }
+.pagination { display: flex; gap: 8px; justify-content: center; margin-top: 32px; flex-wrap: wrap; }
+
+@media (max-width: 900px) {
+  .courses-page { grid-template-columns: 1fr; }
+  .filters-panel { position: static; }
+}

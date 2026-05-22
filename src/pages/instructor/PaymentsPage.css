@@ -1,0 +1,68 @@
+/* PaymentsPage.css */
+
+.payments-course-selector {
+  margin-bottom: 24px;
+}
+
+.payments-section-title {
+  font-size: 15px;
+  font-weight: 700;
+  margin-bottom: 14px;
+  color: var(--text);
+}
+
+.payments-course-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 12px;
+}
+
+.payments-course-card {
+  cursor: pointer;
+  transition: all 0.2s ease;
+  border: 2px solid transparent;
+}
+
+.payments-course-card:hover {
+  border-color: var(--primary);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+}
+
+.payments-course-card.selected {
+  border-color: var(--primary);
+  background: var(--primary-light);
+}
+
+.payments-stats-row {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+  margin-top: 20px;
+}
+
+.payments-stat-card {
+  text-align: center;
+}
+
+.payments-stat-card .stat-label {
+  font-size: 13px;
+  color: var(--text-muted);
+  margin-bottom: 6px;
+  font-weight: 500;
+}
+
+.payments-stat-card .stat-value {
+  font-size: 28px;
+  font-weight: 800;
+}
+
+@media (max-width: 768px) {
+  .payments-stats-row {
+    grid-template-columns: 1fr;
+  }
+
+  .payments-course-grid {
+    grid-template-columns: 1fr;
+  }
+}

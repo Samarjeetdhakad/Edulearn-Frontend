@@ -1,0 +1,13 @@
+/* src/pages/instructor/CreateCoursePage.css */
+.create-course-layout {
+  display: grid;
+  grid-template-columns: 1fr 300px;
+  gap: 24px;
+  align-items: start;
+}
+.tips-panel { position: sticky; top: calc(var(--navbar-h) + 16px); }
+
+@media (max-width: 900px) {
+  .create-course-layout { grid-template-columns: 1fr; }
+  .tips-panel { position: static; }
+}

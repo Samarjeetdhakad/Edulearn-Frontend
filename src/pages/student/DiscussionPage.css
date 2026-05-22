@@ -1,0 +1,17 @@
+/* src/pages/student/DiscussionPage.css */
+.discussion-layout { display: grid; grid-template-columns: 360px 1fr; gap: 20px; }
+.thread-list-panel { display: flex; flex-direction: column; gap: 10px; }
+.thread-item { cursor: pointer; transition: var(--transition); }
+.thread-item:hover { box-shadow: var(--shadow-md); transform: translateY(-1px); }
+.thread-item.active { border-color: var(--primary); box-shadow: 0 0 0 2px var(--primary-light); }
+.thread-title { font-size: 14px; font-weight: 700; margin-bottom: 6px; color: var(--secondary); line-height: 1.4; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+.thread-body-preview { font-size: 13px; color: var(--text-muted); line-height: 1.5; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; margin-bottom: 10px; }
+.thread-meta { display: flex; gap: 14px; font-size: 12px; color: var(--text-muted); }
+
+.reply-card { border-left: 3px solid var(--border); }
+.reply-card.accepted { border-left-color: var(--success); }
+.accepted-badge { display: inline-block; background: #d1fae5; color: #065f46; font-size: 12px; font-weight: 700; padding: 3px 10px; border-radius: 20px; margin-bottom: 10px; }
+
+@media (max-width: 900px) {
+  .discussion-layout { grid-template-columns: 1fr; }
+}

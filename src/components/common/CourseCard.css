@@ -1,0 +1,52 @@
+/* src/components/common/CourseCard.css */
+.course-card { overflow: hidden; }
+
+.course-thumb {
+  display: block; height: 160px; position: relative; overflow: hidden;
+  text-decoration: none;
+}
+.course-thumb:hover .thumb-overlay { opacity: 1; }
+
+.thumb-overlay {
+  position: absolute; inset: 0; background: rgba(0,0,0,0.35);
+  display: flex; flex-direction: column; justify-content: space-between;
+  padding: 12px; opacity: 0.8; transition: opacity 0.2s;
+}
+.thumb-category {
+  display: inline-block; padding: 3px 10px; background: rgba(255,255,255,0.2);
+  backdrop-filter: blur(8px); border-radius: 20px; font-size: 12px;
+  font-weight: 700; color: #fff; align-self: flex-start;
+}
+.thumb-duration { color: rgba(255,255,255,0.9); font-size: 12px; font-weight: 600; }
+
+.draft-ribbon {
+  position: absolute; top: 12px; right: -20px;
+  background: var(--warning); color: #fff; font-size: 11px; font-weight: 700;
+  padding: 4px 28px; transform: rotate(35deg);
+}
+
+.course-body { padding: 16px; }
+
+.course-title {
+  display: block; font-size: 15px; font-weight: 700; color: var(--secondary);
+  margin-bottom: 6px; text-decoration: none; line-height: 1.4;
+  display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden;
+}
+.course-title:hover { color: var(--primary); text-decoration: none; }
+
+.course-instructor { font-size: 13px; color: var(--text-muted); margin-bottom: 10px; }
+
+.course-footer { display: flex; align-items: center; justify-content: space-between; margin-top: 4px; }
+.course-price { font-size: 18px; font-weight: 800; color: var(--secondary); }
+
+.guest-lock-badge {
+  position: absolute; inset: 0; background: rgba(0,0,0,0.5);
+  display: flex; align-items: center; justify-content: center;
+  opacity: 0; transition: opacity 0.3s; pointer-events: none;
+}
+.course-card.guest-locked:hover .guest-lock-badge { opacity: 1; }
+.guest-lock-badge span {
+  background: #fff; color: var(--secondary); padding: 6px 12px;
+  border-radius: 20px; font-size: 12px; font-weight: 700;
+  box-shadow: var(--shadow-md);
+}

@@ -1,0 +1,100 @@
+/* src/pages/instructor/CourseCurriculumPage.css */
+.curriculum-container {
+  padding-bottom: 40px;
+}
+
+.curriculum-item {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 20px !important;
+}
+
+.item-order {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  background: var(--bg);
+  padding: 8px;
+  border-radius: var(--radius-sm);
+  min-width: 44px;
+}
+
+.order-btn {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  color: var(--text-muted);
+  font-size: 10px;
+  padding: 4px;
+}
+
+.order-btn:hover:not(:disabled) {
+  color: var(--primary);
+}
+
+.order-btn:disabled {
+  opacity: 0.3;
+  cursor: not-allowed;
+}
+
+.order-num {
+  font-weight: 800;
+  font-size: 14px;
+  color: var(--primary);
+}
+
+.item-content {
+  flex: 1;
+}
+
+.item-title {
+  font-size: 16px;
+  font-weight: 700;
+  margin-bottom: 4px;
+}
+
+.item-meta {
+  font-size: 13px;
+  color: var(--text-muted);
+}
+
+.item-actions {
+  display: flex;
+  gap: 8px;
+}
+
+/* Modal */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  backdrop-filter: blur(4px);
+}
+
+.modal-content {
+  width: 100%;
+  max-width: 500px;
+  animation: modalFadeUp 0.3s ease-out;
+}
+
+@keyframes modalFadeUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.text-error {
+  color: #ef4444 !important;
+}
+
+.text-error:hover {
+  background: #fee2e2 !important;
+}

@@ -1,0 +1,42 @@
+/* src/components/layout/Footer.css */
+.footer {
+  background: var(--secondary); color: rgba(255,255,255,0.75);
+  padding: 56px 0 24px;
+}
+.footer-grid {
+  display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 40px;
+  margin-bottom: 40px;
+}
+.footer-logo {
+  font-family: 'Sora', sans-serif; font-size: 22px; font-weight: 700;
+  color: #fff; margin-bottom: 12px;
+}
+.footer-brand p { font-size: 14px; line-height: 1.7; max-width: 280px; }
+.social-links { display: flex; gap: 12px; margin-top: 16px; }
+.social-links a {
+  font-size: 20px; transition: var(--transition);
+  text-decoration: none;
+}
+.social-links a:hover { transform: translateY(-2px); }
+
+.footer-links h4 { color: #fff; font-size: 14px; font-weight: 700; margin-bottom: 16px; text-transform: uppercase; letter-spacing: 0.05em; }
+.footer-links a {
+  display: block; color: rgba(255,255,255,0.6); font-size: 14px;
+  margin-bottom: 10px; text-decoration: none; transition: color 0.2s;
+}
+.footer-links a:hover { color: #fff; }
+
+.footer-bottom {
+  border-top: 1px solid rgba(255,255,255,0.1); padding-top: 24px;
+  display: flex; align-items: center; justify-content: space-between;
+  flex-wrap: wrap; gap: 8px;
+}
+.footer-bottom p { font-size: 14px; color: rgba(255,255,255,0.5); }
+
+@media (max-width: 768px) {
+  .footer-grid { grid-template-columns: 1fr 1fr; }
+  .footer-brand { grid-column: 1 / -1; }
+}
+@media (max-width: 480px) {
+  .footer-grid { grid-template-columns: 1fr; }
+}

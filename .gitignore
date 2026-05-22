@@ -1,0 +1,28 @@
+# ── Node / Build ─────────────────────────────────────────────
+node_modules/
+dist/
+dist-ssr/
+*.local
+.vite/
+package-lock.json
+
+# ── Environment / Secrets ────────────────────────────────────
+.env
+.env.*
+!.env.example
+
+# ── IDEs (IntelliJ, VS Code, Eclipse) ───────────────────────
+.idea/
+*.iml
+*.ipr
+*.iws
+.vscode/
+.metadata/
+.settings/
+.project
+.classpath
+
+# ── OS files ─────────────────────────────────────────────────
+.DS_Store
+Thumbs.db
+desktop.ini
